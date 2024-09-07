@@ -10,7 +10,7 @@ const SSR: NextPage<SSRProps> = (props) => {
 
     return <div>
         <Head>
-            <title>SSR</title>
+            <title>SSR test</title>
             <link rel="/favicon.ico"/>
         </Head>
         <main>
