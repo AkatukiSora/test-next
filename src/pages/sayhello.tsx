@@ -2,19 +2,17 @@ import { profile } from "console";
 import { useState, useEffect } from "react";
 
 function SayHello() {
-    const [data, setData] = useState({name: ""})
+  const [data, setData] = useState({ name: "" });
 
-    useEffect(() => {
-        fetch("/api/hello")
-            .then((res) => res.json())
-            .then((profile) => {
-                setData(profile)
-            })
-    }, [])
+  useEffect(() => {
+    fetch("/api/hello")
+      .then((res) => res.json())
+      .then((profile) => {
+        setData(profile);
+      });
+  }, []);
 
-    return <div>
-        hello {data.name}
-    </div>
+  return <div>hello {data.name}</div>;
 }
 
-export default SayHello
+export default SayHello;
