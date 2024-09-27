@@ -1,5 +1,9 @@
-import { profile } from "console";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
+
+const CenterDiv = styled.div`
+  text-align: center;
+`;
 
 function SayHello() {
   const [data, setData] = useState({ name: "" });
@@ -12,7 +16,7 @@ function SayHello() {
       });
   }, []);
 
-  return <div>hello {data.name}</div>;
+  return <CenterDiv>hello {data.name}</CenterDiv>;
 }
 
 export default SayHello;
